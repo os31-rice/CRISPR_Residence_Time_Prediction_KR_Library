@@ -12,11 +12,11 @@ Kat Rosner's initial library focused on a targeted set of gRNAs selected across 
 
 The library is available in the csv file, "combined_libraries_prioritized_flat_top_distribution.csv".
  
-All measurements were taken from publicly availabile datasets. Expression levels in KR's initial library were greatly varied (Figure 1). To quantify accessibility, I measured the ATAC-seq readouts of all gRNAs. The distribution of ATAC-seq data which was heavily right-skewed (Figure 2, left). I used the following formula to give higher weight to genes with very high ATAC-seq data (Figure 2, right):
+All measurements were taken from publicly availabile datasets. Expression levels in KR's initial library were greatly varied (Figure 1). To quantify accessibility, I measured the ATAC-seq readouts of each gRNA. The distribution of ATAC-seq data which was heavily right-skewed (Figure 2, left). I used the following formula to give higher weight to gRNAs with very high ATAC-seq data (Figure 2, right):
 
 *Accessibility Metric = log2(Raw ATAC-seq Data + 1), scaled from 0 to 1*
 
-Finally, I measured the concentration of regulatory regions in each cell using a publicly available dataset. This dataset, known as ReMap, is derived from an integrative analysis of DNA-binding experiments in common eukaryotic cell lines; while definitely not perfect, I intended to use it as an approximation for TF binding sites in ARPE-19 cells. This distribution mirrored that of the expression levels', being quite varied (Figure 3). Interestingly, correlation analyses between each metric and expression data showed a moderate correlation between TF Binding Site Data and Expression data (Figure 5), but little correlation between Accessibility and Expression (Figure 4), which runs contrary to expectations.
+Finally, I measured the concentration of regulatory regions in the vicinity of each gRNA using a publicly available dataset. This dataset, known as ReMap, is derived from an integrative analysis of DNA-binding experiments in common eukaryotic cell lines; while definitely not perfect, I intended to use it as an approximation for relative concentration of TF binding sites surrounding each gRNA in ARPE-19 cells. This distribution mirrored that of the expression levels', being quite varied (Figure 3). Interestingly, correlation analyses between each metric and expression data showed a moderate correlation between TF Binding Site Data and Expression data (Figure 5), but little correlation between Accessibility and Expression (Figure 4), which runs contrary to expectations.
 
 The curated gRNA library and corresponding multi-omic annotations are provided in combined_libraries_prioritized_flat_top_distribution.csv.
 
